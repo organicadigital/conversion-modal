@@ -4,6 +4,7 @@ function conversionModal(html, custom_config) {
   var config = custom_config || {}
     , type = config.type || 'exit_intent'
     , background = config.background || 'white'
+    , color = config.color || 'black'
     , accept_text = config.accept_text
     , accept_link = config.accept_link || '#'
     , accept_link_target = config.accept_link_target || '_self'
@@ -18,7 +19,7 @@ function conversionModal(html, custom_config) {
   }
 
   function applyStyles(modal) {
-    modal.css({background: background});
+    modal.css({background: background, color: color});
   }
 
   function dismiss(modal) {
@@ -30,9 +31,9 @@ function conversionModal(html, custom_config) {
     var wrapper = "<div class='conversion-modal " + type + "' id='" + 
         id + "'><div class='conversion-modal-wrapper'>" + html + 
         "<div class='actions'></div></div></div>";
-    document.write(wrapper);
+    $("body").append(wrapper);
 
-    wrapper = $(document.getElementById(id));
+    wrapper = $("#" + id);
 
     var actions = $(".actions", wrapper);
     if(accept_text != undefined) {
@@ -57,5 +58,7 @@ function conversionModal(html, custom_config) {
   }
 
   // Calls the appropriated function
-  eval(type + '();')
+  $(function() {
+    eval(type + '();')
+  });
 };
