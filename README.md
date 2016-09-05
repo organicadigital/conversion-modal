@@ -47,4 +47,4 @@ TODO Table with all options
 
 ## Thanks
 
-    Made with <3 and a lot of coffee [@Orgânica Digital Innovation](http://www.organicadigital.com).
+Made with <3 and a lot of coffee [Orgânica Digital Innovation](http://www.organicadigital.com).
