@@ -1,0 +1,46 @@
+.conversion-modal {
+  display: none; 
+}
+
+.conversion-modal .conversion-modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.conversion-modal .conversion-modal-wrapper .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.conversion-modal .conversion-modal-wrapper .actions a {
+  text-decoration: none;
+  color: #2d0707;
+}
+
+.conversion-modal .conversion-modal-wrapper .actions a.accept-link {
+  background: green none repeat scroll 0% 0%;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.conversion-modal .conversion-modal-wrapper .actions a.reject-link {
+  color: #5a5a5a;
+}
+
+.conversion-modal.exit_intent {
+  position: absolute;
+  z-index: 999999999999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
